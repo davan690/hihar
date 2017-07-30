@@ -7,9 +7,10 @@ The code, media and files here are for GovHack 2017, Canberra, 28th-30th July.
 - [statistics](statistics) folder has all the files and sources used for number crunching
 
 Also, check out:
-- [project site](https://sites.google.com/view/roohitgovhack/home)
-- [videos on youtube](https://www.youtube.com/channel/UC223eivQzQM5Z98YyBuf73w)
+- [video](/media/video.mov)
+- [youtube](https://www.youtube.com/channel/UC223eivQzQM5Z98YyBuf73w)
 - [presentation](/media/main-presentation.pdf)
+- [project site](https://sites.google.com/view/roohitgovhack/home)
 
 Description
 ===========
