@@ -27,8 +27,8 @@ People
 ![Team Photo](/media/team-photo.jpg)
 
 - [Anthony Davidson](anthonydavidson101@gmail.com)
-- [David Gregory](david@xcursion.com.au)
-- [Ian Dudley]()
+- [David Gregory](http://davidgregory.com.au)
+- [Ian Dudley](http://iandudley.com)
 - [Mahathir Almashor](https://ma-al.github.io)
 - [Yogesh Mulye](yogesh.mulye@gmail.com)
 
