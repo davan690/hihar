@@ -40,3 +40,4 @@ Technologies
 - Meteor.JS
 - Leaflet
 - Materialize.CSS
+- R
