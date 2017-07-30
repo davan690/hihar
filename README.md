@@ -26,11 +26,11 @@ People
 ======
 ![Team Photo](/media/team-photo.jpg)
 
-- [Anthony Davidson](anthonydavidson101@gmail.com)
+- [Anthony Davidson](https://twitter.com/ANTSstats)
 - [David Gregory](http://davidgregory.com.au)
 - [Ian Dudley](http://iandudley.com)
 - [Mahathir Almashor](https://ma-al.github.io)
-- [Yogesh Mulye](yogesh.mulye@gmail.com)
+- [Yogesh Mulye](https://www.linkedin.com/in/yogesh-mulye-2241572a/)
 
 ![Team Work](/media/team-work.jpg)
 
