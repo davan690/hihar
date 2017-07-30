@@ -9,6 +9,7 @@ The code, media and files here are for GovHack 2017, Canberra, 28th-30th July.
 Also, check out:
 - [project site](https://sites.google.com/view/roohitgovhack/home)
 - [videos on youtube](https://www.youtube.com/channel/UC223eivQzQM5Z98YyBuf73w)
+- [presentation](/media/main-presentation.pdf)
 
 Description
 ===========
@@ -23,13 +24,15 @@ The above allows more efficient collection of better quality data, which helps l
 
 People
 ======
-(photo of team will go here)
+![Team Photo](/media/team-photo.jpg)
 
 - [Anthony Davidson](anthonydavidson101@gmail.com)
 - [David Gregory](david@xcursion.com.au)
 - [Ian Dudley]()
 - [Mahathir Almashor](https://ma-al.github.io)
 - [Yogesh Mulye](yogesh.mulye@gmail.com)
+
+![Team Work](/media/team-work.jpg)
 
 Technologies
 ============
