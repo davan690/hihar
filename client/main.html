@@ -5,7 +5,7 @@
 </head>
 
 <body>
-   {{> main}}
+   <!-- {{> main}} -->
 </body>
 
 
@@ -53,7 +53,6 @@
                Take Picture
             </a>
          </div>
-         <!-- <a href="#" class="takePhoto">take photo</a> -->
          <div class="col s12 m12 l12 center-align" style="padding-top: 2vh">
             <img width="96vh" class="photo">
          </div>
@@ -76,6 +75,11 @@
          <div id='map' ></div>
       </div>
 
+      <div class="right-align" style="padding-top:1vh">
+         <a href="/ack" class="waves-effect waves-light btn-large green darken-2" data-action="submit"><i class="material-icons right">send</i>Submit</a>
+      </div>
+
+      <br>
 
       <div class="card-panel grey lighten-4 flow-text hoverable">
          <div class="row">
@@ -113,16 +117,24 @@
          </div>
       </div>
 
-      <div class="right-align" style="padding-top:1vh">
-         <a class="waves-effect waves-light btn-large green darken-2" data-action="submit-suggest"><i class="material-icons right">send</i>Submit</a>
-      </div>
-
-      <br>
-
       <div class="card-panel grey lighten-4 flow-text footer-text right-align" style="margin-top:40vh !important">
          <p>Sanity check counter: {{counter}} times.<br>
             Program Messages: {{message}}
          </p>
+      </div>
+
+   </div>
+</template>
+
+<template name="ack">
+   <div class="container">
+      <div class="card-panel grey lighten-4 flow-text center-align" style="margin-top:2vh !important">
+         <h2>Thank you!</h2>
+         <p>Your report has been submitted. Thanks for helping us help the animals!</p>
+      </div>
+
+      <div class="col s12 m12 l12 center-align" style="padding-top: 2vh">
+         <img width="96vh" class="ack-photo" src="kangaroo-roadsign-wikipedia.png">
       </div>
 
    </div>

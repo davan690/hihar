@@ -1,18 +1,21 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Mongo } from 'meteor/mongo';
 
 import './main.html';
 
-// Router.route('/', function () {
-//   // render the Home template with a custom data context
-//   this.render('Home', {data: {title: 'Honey! I Hit A Roo!'}});
-// });
 
-// // when you navigate to "/one" automatically render the template named "One".
-// Router.route('/one');
+Posts = new Mongo.Collection("posts");
+Posts.insert({title: "title-1"});
+Posts.insert({title: "title-2"});
+console.log(Posts.find().count());
 
-// // when you navigate to "/two" automatically render the template named "Two".
-// Router.route('/two');
+Router.route('/', function () {
+  this.render('main');
+});
+
+Router.route('/ack');
+
 
 
 Template.main.onCreated(function mainOnCreated() {
@@ -58,10 +61,15 @@ Template.main.onRendered(function mainOnRendered()
       circle.addTo(map);
       circle.bindPopup("I am a circle.");
 
-
       Template.instance().message.set("Map Loaded");
       Template.instance().map = map;
    }
+
+   Tracker.afterFlush(function(){
+      this.$(".collapsible").collapsible({
+        accordion: false
+      });
+    }.bind(this));
 
 });
 
@@ -75,15 +83,6 @@ Template.main.helpers({
 });
 
 Template.main.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-    instance.message.set("you pressed the html button");
-  },
-  "click [data-action='polka']"(event, instance) {
-    instance.counter.set(instance.counter.get() + 1);
-    instance.message.set("you pressed the nice button");
-  },
   "click [data-action='quack']"(event, instance) {
     instance.message.set("Trying to get location...");
 
@@ -112,18 +111,37 @@ Template.main.events({
     });
   },
   "click [data-action='takePicture']": function(e, instance) {
-        e.preventDefault();
-        instance.message.set("taking picture");
-        var cameraOptions = {
-            width: 640,
-            height: 480
-        };
-        MeteorCamera.getPicture(cameraOptions, function (error, data) {
-           if (!error) {
-               instance.$('.photo').attr('src', data);
-           }
-        });
-    }
+    e.preventDefault();
+    instance.message.set("taking picture");
+    var cameraOptions = {
+        width: 640,
+        height: 480
+    };
+    MeteorCamera.getPicture(cameraOptions, function (error, data) {
+       if (!error) {
+          instance.$('.photo').attr('src', data);
+          instance.$('.ack-photo').attr('src', data);
+          instance.message.set("picture taken!");
+       }
+    });
+  },
+  "click [data-action='submit']": function(e, instance) {
+    var val = instance.$('.capture').value;
+    instance.message.set(val);
+  },
+
+});
+
+
+
+Template.ack.onCreated(function() {
+  this.ack_data = new ReactiveVar("(Empty)");
+});
+
+Template.ack.helpers({
+  ack_data() {
+    return Template.instance().ack_data.get();
+  },
 });
 
 
